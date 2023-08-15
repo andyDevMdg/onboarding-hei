@@ -1,20 +1,15 @@
-# Onboarding API
-
 openapi: 3.0.3
-
 info:
   title: Onboarding API
   version: '1.3'
-  
 servers:
-  - url : http://STD22089.com
-  
-paths: 
+  - url: http://STD22089.com
+paths:
   /students:
     get:
       tags:
         - students
-      summary: Get all students 
+      summary: Get all students
       description: Return informations about all students
       responses:
         '200':
@@ -25,22 +20,20 @@ paths:
                 $ref: '#/components/schemas/Student'
         '500':
           description: Internal Server error
-    
     post:
-      tags: 
+      tags:
         - students
       summary: Add a new student
       description: Add a new student
       requestBody:
-        description: Create a new student 
+        description: Create a new student
         required: true
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/Student'
-      
       responses:
-        '200': 
+        '200':
           description: Successful operation
           content:
             application/json:
@@ -48,7 +41,6 @@ paths:
                 $ref: '#/components/schemas/Student'
         '500':
           description: Internal Server error
-  
 components:
   schemas:
     Student:
@@ -66,4 +58,4 @@ components:
           example: andy
         birthdate:
           type: string
-          format: date #require react-
+          format: date
