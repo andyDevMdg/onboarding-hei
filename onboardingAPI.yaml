@@ -38,7 +38,7 @@ paths:
       summary: Add a new student
       description: Add a new student
       requestBody:
-        description: Create a new student
+        description: Created student object
         required: true
         content:
           application/json:
@@ -68,6 +68,21 @@ components:
         name:
           type: string
           example: andy
+        birthdate:
+          type: string
+          format: date
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+    Tag:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
         birthdate:
           type: string
           format: date
