@@ -94,6 +94,10 @@ paths:
         "500":
           description: Internal Server Error
 
+  /teachers:
+    get:
+    post:
+
 components:
   schemas:
     Student:
