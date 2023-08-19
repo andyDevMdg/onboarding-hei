@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: Onboarding API
-  version: '1.0.2'
+  version: "1.0.2"
   description: >-
     Firstname : Andy Avotiana 
 
@@ -24,13 +24,13 @@ paths:
       summary: Get all students
       description: Return informations about all students
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Student'
-        '500':
+                $ref: "#/components/schemas/Student"
+        "500":
           description: Internal Server error
     post:
       tags:
@@ -43,15 +43,15 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Student'
+              $ref: "#/components/schemas/Student"
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Student'
-        '500':
+                $ref: "#/components/schemas/Student"
+        "500":
           description: Internal Server error
 components:
   schemas:
@@ -74,7 +74,7 @@ components:
         tags:
           type: array
           items:
-            $ref: '#/components/schemas/Tag'
+            $ref: "#/components/schemas/Tag"
     Tag:
       type: object
       properties:
