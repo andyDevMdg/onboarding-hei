@@ -53,6 +53,28 @@ paths:
                 $ref: "#/components/schemas/Student"
         "500":
           description: Internal Server error
+
+    put:
+      tags:
+        - students
+      summary: Update an existing Student
+      description: Update an existing Student by Id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Student"
+        required: true
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Student"
+        "500":
+          description: Internal server error
+
 components:
   schemas:
     Student:
