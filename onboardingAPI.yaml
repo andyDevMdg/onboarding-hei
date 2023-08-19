@@ -75,6 +75,25 @@ paths:
         "500":
           description: Internal server error
 
+  /students/{student}:
+    delete:
+      tags:
+        - students
+      summary: Delete a student
+      description: delete a student
+      parameters:
+        - in: path
+          name: student
+          description: the name of the student that need to be deleted
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: successful operation
+        "500":
+          description: Internal Server Error
+
 components:
   schemas:
     Student:
