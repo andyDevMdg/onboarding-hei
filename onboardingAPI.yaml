@@ -183,7 +183,7 @@ components:
         lastname:
           type: string
           example: Ramarozaka
-        course:
+        courses:
           $ref: '#/components/schemas/Course'
     Course:
       type: object
