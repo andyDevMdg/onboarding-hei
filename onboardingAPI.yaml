@@ -190,3 +190,17 @@ components:
           example: Ramarozaka
         course:
           $ref: "#/components/schemas/Course"
+
+    Course:
+      type: object
+      properties:
+        courseCode:
+          type: string
+          example: PROG1
+        courseName:
+          type: string
+          example: Algorithmique
+        courseDuration:
+          type: string
+          format: iso8601
+          example: PT40H
