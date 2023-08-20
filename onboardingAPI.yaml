@@ -91,6 +91,28 @@ paths:
           description: successful operation
         '500':
           description: Internal Server Error
+  /teachers:
+    post:
+      tags:
+        - teachers
+      summary: Add a new teacher
+      description: Create a new teacher
+      requestBody:
+        description: Information about the new teacher to add
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Teacher'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Teacher'
+        '500':
+          description: Internal Server Error
   /teachers/{teacherId}:
     get:
       tags:
@@ -105,28 +127,6 @@ paths:
           schema:
             type: integer
             format: int64
-      responses:
-        '200':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Teacher'
-        '500':
-          description: Internal Server Error
-  /teachers:
-    post:
-      tags:
-        - teachers
-      summary: Add a new teacher
-      description: Create a new teacher
-      requestBody:
-        description: Information about the new teacher to add
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Teacher'
       responses:
         '200':
           description: Successful operation
