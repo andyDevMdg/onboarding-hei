@@ -117,6 +117,7 @@ paths:
         "500":
           description: Internal Server Error
 
+  /teachers:
     post:
 
 components:
